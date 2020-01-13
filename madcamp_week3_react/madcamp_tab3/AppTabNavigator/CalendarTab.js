@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet, Button, SafeAreaView } from "react-native";
 import { Calendar, Agenda } from 'react-native-calendars';
-import { AntDesign } from '@expo/vector-icons'
-import { Icon } from 'native-base';
+import { Ionicons } from '@expo/vector-icons'
 
 export default class CalendarTab extends Component {
     static navigationOptions = {
         tabBarIcon: ({ tintColor }) => (
-            <AntDesign name={'calendar'} style={{ color: tintColor }} />
+            <Ionicons name={'ios-calendar'} style={{  fontSize:30,color: tintColor }} />
         )
     }
 

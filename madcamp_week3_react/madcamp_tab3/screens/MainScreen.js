@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Platform, Image } from 'react-native';
 import { Icon } from 'native-base'; // 추가된 코드
 import { createAppContainer } from 'react-navigation'; 
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs'; 
-import { AntDesign } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons'
 
 import CalendarTab from '../AppTabNavigator/CalendarTab'
 import MeetMeetTab from '../AppTabNavigator/MeetMeetTab'
@@ -33,7 +33,7 @@ const AppTabNavigator = createMaterialTopTabNavigator({
         }
       })
     },
-    iconStyle: { height: 100 },
+    iconStyle: { height: 40 },
     activeTintColor: '#be1323',
     inactiveTintColor: '#d1cece',
     upperCaseLabel: false,
@@ -47,12 +47,14 @@ const AppTabContainet = createAppContainer(AppTabNavigator);
 export default class MainScreen extends Component {
      // navigationOptions 코드 추가
   static navigationOptions = {
-    headerLeft: <Icon name='person' style={{ paddingLeft:20}} />,
-    title: 'meetmeet',
-    headerRight: <Icon name='ios-home' style={{ paddingRight:20 }} />,
-    headerTitleStyle : {
-      fontFamily:'billabong', color:'#be1323', fontSize: 20
-    }
+    headerLeft: <Ionicons name={'ios-contacts'} style={{ fontSize:30, paddingLeft:10}} />,
+    headerTitle: (
+      <Image style={{width:80,height:20,alignSelf: 'center'}} source={require('../assets/images/title.png')}/>
+    ),
+    headerRight: <Ionicons name={'ios-home'} style={{ fontSize:30, paddingRight:10 }}/>,
+    // headerTitleStyle : {
+    //   fontFamily:'billabong', color:'#be1323'
+    // }
   }
 
   render() {
@@ -65,5 +67,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    //paddingBottom: -10
   },
 });

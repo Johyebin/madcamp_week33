@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet, Button, Image } from "react-native";
-import { AntDesign } from '@expo/vector-icons'
-import { Icon } from 'native-base';
+import { Ionicons } from '@expo/vector-icons'
 
 export default class ProfileTab extends Component {
     
     static navigationOptions = {
         tabBarIcon: ({ tintColor }) => (
-            <Icon name='ios-home' style={{ color: tintColor }} />
+            <Ionicons name={'ios-person'} style={{  fontSize:30,color: tintColor }} />
         )
     }
 

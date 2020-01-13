@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import { Content} from 'native-base'
-import { AntDesign } from '@expo/vector-icons'
-import { Icon } from 'native-base';
+import { Ionicons } from '@expo/vector-icons'
 
 import MyFriendElement from '../Components/MyFriendElement';
 
@@ -11,7 +10,7 @@ export default class FriendsTab extends Component {
     
     static navigationOptions = {
         tabBarIcon: ({ tintColor }) => (
-            <AntDesign name={'user-friends'} style={{ color: tintColor }} />
+            <Ionicons name={'ios-people'} style={{ fontSize:30,color: tintColor }} />
         )
     }
 
