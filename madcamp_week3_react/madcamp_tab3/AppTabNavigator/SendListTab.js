@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Platform, Image, TouchableOpacity, Text, View, StyleSheet, Button } from "react-native";
 import { Container, Header, Body, CheckBox,Title,Card, CardItem,Left,Right, Content,Thumbnail, Grid,Col } from "native-base";
-import { AntDesign } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons'
 
 import MyList from '../Components/MyList';
 
@@ -10,7 +10,7 @@ export default class SendListTab extends Component {
     
     static navigationOptions = {
         tabBarIcon: ({ tintColor }) => (
-            <AntDesign name={'list'} style={{ color: tintColor }} />
+            <Ionicons name={'ios-list'} style={{ fontSize:30, color: tintColor }} />
         )
     }
 
@@ -18,16 +18,16 @@ export default class SendListTab extends Component {
         return (
          <Container style={{backgroundColor: '#efefef'}}>
            <Header style={styles.header}>
-                <AntDesign name={'arrowleft'}/>
+                <Ionicons name={'ios-arrow-round-back'}/>
                 <Text>MEET MEET</Text>
-                <AntDesign name={'arrowright'}/>
+                <Ionicons name={'ios-arrow-round-forward'}/>
            </Header>
             <Content>
              <Card style={{alignItems: 'center'}}>
                  <CardItem header>
-                    <AntDesign name={"heart"} style={{color:'red'}}/>
+                    <Ionicons name={"ios-heart"} style={{color:'red'}}/>
                     <Title>Your's Send List</Title>
-                    <AntDesign name={"heart"} style={{color:'red'}}/>
+                    <Ionicons name={"ios-heart"} style={{color:'red'}}/>
                  </CardItem>
              </Card>
          {/* 여기에 지정해주는 사항을 모델 클래스인 List클래스에서 변경할 수 있다 / 디비에서 받아서 동적으로 셋팅할수 있게 됨 */}

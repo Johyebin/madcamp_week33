@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Platform, Image, TouchableOpacity, Text, View, StyleSheet, Button } from "react-native";
 import { Container, Header, Body, CheckBox,Title,Subtitle, Card, CardItem, Top,Bottom, Content,Thumbnail, Grid,Col } from "native-base";
-import { AntDesign } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons'
 
 
     
@@ -12,7 +12,7 @@ export default class MeetMeetTab extends Component {
     
     static navigationOptions = {
         tabBarIcon: ({ tintColor }) => (
-            <AntDesign name={'heart'} style={{ color: tintColor }} />
+            <Ionicons name={'ios-heart-half'} style={{ fontSize:30, color: tintColor }} />
         )
     }
 
