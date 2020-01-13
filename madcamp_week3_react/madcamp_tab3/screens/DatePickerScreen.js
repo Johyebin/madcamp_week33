@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, Button, Platform} from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-export default class App extends Component {
+export default class DatePickerScreen extends Component {
   state = {
     date: new Date('2020-06-12T14:42:42'),
     mode: 'date',

@@ -2,28 +2,23 @@ import React, { Component } from "react";
 import { Platform, Image, TouchableOpacity, Text, View, StyleSheet, Button } from "react-native";
 import { Container, Header, Body, CheckBox,Title,Subtitle, Card, CardItem, Top,Bottom, Content,Thumbnail, Grid,Col } from "native-base";
 import { AntDesign } from '@expo/vector-icons'
+import { Icon } from 'native-base'; // 추가된 코드
 
+import App from '../App'
 
-    
 let friends = new Array(); // 선택된 친구들을 저장하기 위한 배열 추후에 문자열로 이어붙일 것임
-
 
 export default class MeetMeetTab extends Component {
     
     static navigationOptions = {
         tabBarIcon: ({ tintColor }) => (
-            <AntDesign name={'heart'} style={{ color: tintColor }} />
+          <Icon name='ios-heart' style={{ color: tintColor }} />
         )
     }
 
     render() {
         return (
           <Container style={{backgroundColor: '#efefef'}}>
-             <Header style={{backgroundColor: 'red'}}>
-             {/* <Button Title="Back" onPress={() => this.props.navigation.navigate("Home")}></Button> */}
-             <Text>>MEETMEET</Text>
-             {/* <Button Title="Home" onPress={() => this.props.navigation.navigate("Home")}></Button> */}
-               </Header>
           <Content>
             <View style={styles.row}>
               {/* 누르면 친구리스트 보여주기 */}
@@ -46,7 +41,7 @@ export default class MeetMeetTab extends Component {
                  </CardItem>
              </Card>
              <Card style={{alignItems: 'center'}}>
-            <CardItem button onPress={() => this.props.navigation.navigate("DatePicker")}>
+            <CardItem button onPress={() =>  this.props.navigation.navigate("DatePicker")}>
                      <Title>When?</Title>
               </CardItem>
              </Card>

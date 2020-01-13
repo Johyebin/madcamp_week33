@@ -11,6 +11,7 @@ import ProfileTab from '../AppTabNavigator/ProfileTab'
 import SendListTab from '../AppTabNavigator/SendListTab'
 import FriendsTab from '../AppTabNavigator/FriendsTab'
 import { HeaderTitle } from 'react-navigation-stack';
+import DatePickerScreen from './DatePickerScreen';
 
 // 하단 탭 네비게이터 생성
 const AppTabNavigator = createMaterialTopTabNavigator({
@@ -18,7 +19,8 @@ const AppTabNavigator = createMaterialTopTabNavigator({
   MeetMeet:{ screen: MeetMeetTab },
   Profile:{ screen: ProfileTab },
   SendList:{ screen: SendListTab },
-  Friends:{ screen: FriendsTab }
+  Friends:{ screen: FriendsTab },
+  // DatePicker: {screen: DatePickerScreen}
 }, {
   animationEnabled: true,
   swipeEnabled: true,
@@ -45,11 +47,11 @@ const AppTabContainet = createAppContainer(AppTabNavigator);
 export default class MainScreen extends Component {
      // navigationOptions 코드 추가
   static navigationOptions = {
-    headerLeft: <AntDesign name={"leftcircle"} style={{ paddingLeft:10}} />,
+    headerLeft: <Icon name='person' style={{ paddingLeft:20}} />,
     title: 'meetmeet',
-    headerRight: <AntDesign name={'home'} style={{ paddingRight:10 }}/>,
+    headerRight: <Icon name='ios-home' style={{ paddingRight:20 }} />,
     headerTitleStyle : {
-      fontFamily:'billabong', color:'#be1323'
+      fontFamily:'billabong', color:'#be1323', fontSize: 20
     }
   }
 

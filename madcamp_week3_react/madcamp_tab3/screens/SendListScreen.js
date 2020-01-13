@@ -16,11 +16,6 @@ export default class SendListScreen extends Component {
   render() {
     return (
      <Container style={{backgroundColor: '#efefef'}}>
-       <Header style={styles.header}>
-            <AntDesign name={'arrowleft'}/>
-            <Text>MEET MEET</Text>
-            <AntDesign name={'arrowright'}/>
-       </Header>
         <Content>
          <Card style={{alignItems: 'center'}}>
              <CardItem header>

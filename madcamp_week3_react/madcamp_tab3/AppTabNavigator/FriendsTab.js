@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import { Content} from 'native-base'
 import { AntDesign } from '@expo/vector-icons'
+import { Icon } from 'native-base';
 
 import MyFriendElement from '../Components/MyFriendElement';
 
@@ -17,7 +18,7 @@ export default class FriendsTab extends Component {
     render() {
         return (
           <View style={styles.container}>
-            <View style={styles.header} />
+            {/* <View style={styles.header} /> */}
             <View style={styles.content}>
                 <Content>
                     <MyFriendElement
@@ -42,9 +43,8 @@ export default class FriendsTab extends Component {
                     username="이치킨"
                     statusLine="치킨먹고 싶다"/>
                 </Content>
-              <Button title="Done" onPress={() => this.props.navigation.navigate("MeetMeet")} />
             </View>
-            <View style={styles.footer} />
+            {/* <View style={styles.footer} /> */}
           </View>
         );
       }
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        borderColor:'#eee',
+        borderColor:'#fff',
         borderBottomWidth:0.5,
         padding: 5,
       },
@@ -81,14 +81,14 @@ const styles = StyleSheet.create({
       },
       userComment: {
         padding:8,
-        backgroundColor:'yellow',
+        backgroundColor:'#be1323',
         borderRadius:5,
       },
       profile: {
         width: 50,
         height: 50,
         borderRadius: 25,
-        backgroundColor: 'yellow',
+        backgroundColor: '#be1323',
       },
       name: {
         paddingLeft: 10,
