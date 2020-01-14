@@ -2,12 +2,24 @@ import React, { Component } from "react";
 import { Text, View, StyleSheet, Button, SafeAreaView } from "react-native";
 import { Calendar, Agenda } from 'react-native-calendars';
 import { Ionicons } from '@expo/vector-icons'
+import * as SQLite from 'expo-sqlite'
+
+
+const db = SQLite.openDatabase('db.db')
 
 export default class CalendarTab extends Component {
     static navigationOptions = {
         tabBarIcon: ({ tintColor }) => (
             <Ionicons name={'ios-calendar'} style={{  fontSize:30,color: tintColor }} />
         )
+    }
+
+    componentDidMount() {
+      db.transaction(tx => {
+        tx.executeSql(
+          'CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT);'
+        );
+      });
     }
 
     constructor(props) {
